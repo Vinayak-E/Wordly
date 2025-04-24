@@ -9,7 +9,7 @@ export async function sendResetEmail(to: string, subject: string, html: string) 
         },
       });
       
-transporter.verify((error, success) => {
+transporter.verify((error: Error | null, success: boolean) => {
     if (error) {
       console.error('Transporter verification failed:', error);
     } else {

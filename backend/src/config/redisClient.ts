@@ -7,10 +7,10 @@ export const redisClient = createClient({
   url: process.env.REDIS_URL || 'redis://localhost:6379',
 });
 
-redisClient.connect().catch((err) => {
+redisClient.connect().catch((err: Error) => {
   console.log('Redis connection error:', err);
 });
 
-redisClient.on('error', (err) => {
+redisClient.on('error', (err : Error | null) => {
   console.log('Redis Client Error:', err);
 });
