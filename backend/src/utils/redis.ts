@@ -1,6 +1,4 @@
-import { redisClient } from '../config/redis';
-
-
+import redisClient from "../config/redis";
 
 
    export const setRedisData = async (key: string, data: any, expiry: number): Promise<void> => {
