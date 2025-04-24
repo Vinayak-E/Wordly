@@ -10,6 +10,7 @@ export interface IUser {
   preferences: Types.ObjectId[];
   createdAt: Date;
   profileImage?:string;
+  _id: Types.ObjectId;
 }
 
 export interface RegisterData {

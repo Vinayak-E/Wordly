@@ -1,9 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import { verifyAccessToken } from '../utils/jwt';
 import User from '../models/User';
+import { IUser } from '../interfaces/User.interface';
 
 export interface AuthRequest extends Request {
-  user?: any;
+  user?: IUser;
 }
 
 const authMiddleware = async (req: AuthRequest, res: Response, next: NextFunction): Promise<void> => {
