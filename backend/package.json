@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/uuid": "^10.0.0",
     "aws-sdk": "^2.1692.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
