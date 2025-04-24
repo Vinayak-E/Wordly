@@ -4,7 +4,7 @@ import User from '../models/User';
 import { IUser } from '../interfaces/User.interface';
 
 export interface AuthRequest extends Request {
-  user: IUser;
+  user?: IUser;
 }
 
 const authMiddleware = async (req: AuthRequest, res: Response, next: NextFunction): Promise<void> => {
