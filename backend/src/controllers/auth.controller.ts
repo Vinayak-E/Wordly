@@ -3,11 +3,12 @@ import bcrypt from 'bcryptjs';
 import User from '../models/User';
 import { sendResetEmail } from '../utils/email';
 import { setRedisData, getRedisData } from '../utils/redis';
-import { redisClient } from '../config/redisClient';
+
 
 import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '../utils/jwt';
 import { comparePasswords, generateOTP } from '../helpers/helperFuntions';
 import { RegisterData } from '../interfaces/User.interface';
+import redisClient from '../config/redisClient';
 
 
 
