@@ -1,4 +1,3 @@
-// src/api/axios.ts
 import { store } from '@/app/store';
 import { logout } from '@/features/auth/authSlice';
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
@@ -11,7 +10,7 @@ const api = axios.create({
   },
 });
 
-// Store for pending requests to retry after token refresh
+
 let isRefreshing = false;
 let failedQueue: Array<{
   resolve: (value: unknown) => void;

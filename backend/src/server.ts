@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://wordly-sand.vercel.app'],
+    origin: ['http://localhost:5175', 'https://wordly-sand.vercel.app'],
     credentials: true,
   })
 );

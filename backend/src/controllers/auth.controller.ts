@@ -100,16 +100,16 @@ console.log("req",req.body);
 
     res.cookie('accessToken', accessToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 15 * 60 * 1000, // 15 minutes
+      secure: true, 
+      sameSite: 'none', 
+      maxAge: 15 * 60 * 1000,
     });
 
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      secure: true,
+      sameSite: 'none',
+      maxAge: 7 * 24 * 60 * 60 * 1000,// 7 days
     });
 
     res.status(201).json({
@@ -176,16 +176,16 @@ export const login = async (req: Request, res: Response): Promise<void> => {
 
     res.cookie('accessToken', accessToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 15 * 60 * 1000, // 15 minutes
+      secure: true,
+      sameSite: 'none',
+      maxAge: 15 * 60 * 1000,
     });
 
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      secure: true,
+      sameSite: 'none',
+      maxAge: 7 * 24 * 60 * 60 * 1000,// 7 days
     });
 
     res.json({
@@ -228,16 +228,16 @@ export const refreshToken = async (req: Request, res: Response): Promise<void> =
   
       res.cookie('accessToken', newAccessToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
-        maxAge: 15 * 60 * 1000, // 15 minutes
+        secure: true, 
+        sameSite: 'none', 
+        maxAge: 15 * 60 * 1000,
       });
   
       res.cookie('refreshToken', newRefreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
-        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+        secure: true,
+        sameSite: 'none',
+        maxAge: 7 * 24 * 60 * 60 * 1000,// 7 days
       });
          console.log('new refresh token updated')
       res.json({ message: 'Tokens refreshed successfully' });
