@@ -1,4 +1,4 @@
-import { redisClient } from '../config/redisClient';
+import { redisClient } from '../config/redis';
 
 
 

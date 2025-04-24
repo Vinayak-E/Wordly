@@ -10,7 +10,7 @@ import articleRoutes from './routes/article.routes';
 import categoryRoutes from './routes/category.routes';
 import uploadRoutes from './routes/upload.routes';
 import connectDB from './config/db';
-import redisClient, { initRedis } from './config/redisClient';
+import  redisClient, { initRedis } from './config/redis';
 
 
 dotenv.config();
@@ -29,7 +29,7 @@ app.use(express.json());
 
 app.use(
   session({
-    store: new RedisStore({ client: redisClient, ttl: 86400 }), 
+    store: new RedisStore({ client: redisClient, ttl: 86400 }),     
     secret: process.env.SESSION_SECRET || 'your-secret',
     resave: false,
     saveUninitialized: false,

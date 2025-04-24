@@ -8,7 +8,7 @@ import { setRedisData, getRedisData } from '../utils/redis';
 import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '../utils/jwt';
 import { comparePasswords, generateOTP } from '../helpers/helperFuntions';
 import { RegisterData } from '../interfaces/User.interface';
-import redisClient from '../config/redisClient';
+import redisClient from '../config/redis';
 
 
 
